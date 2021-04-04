@@ -14,5 +14,5 @@ def jsonParse(def json) {
 def pr = httpRequest url: "http://api.exchangeratesapi.io/v1/latest?access_key=ca05b43b2ac172d7ddb851923c5f3d1c"
 
 for (p in jsonParse(pr.content).values) { 
-    println(p)
+    println(p.rates.HKD)
 }
